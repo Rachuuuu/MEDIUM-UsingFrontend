@@ -1,0 +1,22 @@
+.corousel-heading
+{
+    font-size: 100px;
+    font-weight: 400;
+    margin-top: 150px;
+}
+.corousel-text
+{
+    font-size: 26px;
+    width: 469px;
+    margin: 45px 0;
+    font-weight: 300;
+}
+.corousel-button{
+    font-size: 22px;
+    border: 0;
+    background-color: black;
+    color: white;
+    width: 250px;
+    padding: 10px;
+    border-radius: 50px;
+}

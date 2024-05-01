@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medium Clone FrontEnd</title>
+    <!--Including Navbar CSS-->
+    <link rel="stylesheet" href="CSS/navbar.css">
+
+    <!--CAROUSEL CSS-->
+    <link rel="stylesheet" href="CSS/corousel.css".css">
+
+    <!--Trending Articles CSS-->
+    <link rel="stylesheet" href="CSS/trending-articles.css".css">
+
+    <!--Main Articles CSS-->
+    <link rel="stylesheet" href="CSS/main-articles.css".css">
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        .container
+        {
+            width: 1000px;
+            margin: auto;
+            height: 500px;
+          /*  border: 1px solid black;  */
+            margin-top: 90px;
+            font-family: sans-serif;
+        }
+        .yellow-container
+        {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 550px;
+            width: 100%;
+            border: 1px solid black;
+           background-color: #FFC017;
+           z-index: -1;
+        }
+        .separation-line
+        {
+          margin-top: 50px;
+          border: 1px solid #cccccc34;
+          width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+<!--YELLOW BOX CONTAINER OF COROUSEL STARTS-->
+<div class="yellow-container" ></div>
+<!--YELLOW BOX CONTAINER OF COROUSEL STARTS-->
+
+
+    <!--NAVBAR STARTS---------------------------------------->
+    <nav id="navbar" class="navbar">
+       <div class="nav-logo">
+        <div class="nav-image">
+        </div>
+       </div>
+       <div class="nav-links">
+         <a class="nav-itm" href="#">Our Story</a>
+         <a class="nav-itm" href="#">Membership</a>
+         <a class="nav-itm" href="#">Write</a>
+         <a class="nav-itm" href="#">Sign in</a>
+         <button class="get-started">
+            <span>Get Started</span>
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
+         </button>
+       </div>
+    </nav>
+    <!--NAVBAR ENDS ----------------------------------------->
+
+
+
+
+
+ <!--CONTAINER STARTS------------------------------------------------->
+    <div class="container">
+       <!--COROUSEL STARTS------>
+       <div class="corousel">
+        <h1 class="corousel-heading">Stay curious.</h1>
+        <div class="corousel-text">Discover stories, thinking, and expertise from writers on any topic.</div>
+       <button class="corousel-button">Start reading</button>
+    </div>
+     <!--COROUSEL ENDS-------->
+
+    </div>
+
+
+  <!--CONTAINER ENDS------------------------------------------------->
+
+  <!--TRENDING ARTICLES STARTS HERE-------------------------------->
+  <div class="trending-articles">
+    <div class="trending-heading">
+      <img src="data:image/png;base64,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" alt="">
+      <div class="trending-heading-text">Trending on Medium</div>
+    </div>
+    <div class="articles-list">
+        <div class="article article-1">
+          <div class="article-no">01</div>
+          <div class="article-details">
+            <div class="article-details-1">
+             <img src="https://miro.medium.com/v2/resize:fill:19:19/1*KCdWeLHgIFfw5gv7fX97Eg.jpeg" alt="">
+    <div class="article-author-detail">
+      <span class="author">
+      Thi-Lam-Thuy LE 
+      <div class="about-author">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, incidunt!
+      </div>
+    </span>in <span>Towards Data Science</span></div>
+         
+            </div>
+            <div class="article-details-2">
+              I Quit Murdering People for 7 days. Here's What happened? 
+            </div>
+            <div class="article-details-3">
+              <span class="article-date">Jan 16&nbsp;&sdot;&nbsp;</span>
+              <span class="article-read-time">3 min read</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="article article-2">
+       
+          <div class="article-no">02</div>
+          <div class="article-details">
+            <div class="article-details-1">
+             <img src="https://miro.medium.com/v2/resize:fill:19:19/1*nt5oYL2LQAjmoFiy8v8xgQ.png" alt="">
+    <div class="article-author-detail">
+      <span class="author">
+        Thi-Lam-Thuy LE 
+        <div class="about-author">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, incidunt!
+        </div>
+    </span>in <span>Towards Data Science</span></div>
+         
+            </div>
+            <div class="article-details-2">
+              I Quit Murdering People for 7 days. Here's What happened?
+            </div>
+            <div class="article-details-3">
+              <span class="article-date">Jan 16&nbsp;&sdot;&nbsp;</span>
+              <span class="article-read-time">3 min read</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="article article-3">
+
+          <div class="article-no">03</div>
+          <div class="article-details">
+            <div class="article-details-1">
+             <img src="https://miro.medium.com/v2/resize:fill:19:19/1*yAqDFIFA5F_NXalOJKz4TA.png" alt="">
+    <div class="article-author-detail">
+      <span class="author">
+        Thi-Lam-Thuy LE 
+        <div class="about-author">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, incidunt!
+        </div>
+      </span>in <span>Towards Data Science</span></div>
+         
+            </div>
+            <div class="article-details-2">
+              I Quit Murdering People for 7 days. Here's What happened?
+            </div>
+            <div class="article-details-3">
+              <span class="article-date">Jan 16&nbsp;&sdot;&nbsp;</span>
+              <span class="article-read-time">3 min read</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="article article-4">
+
+          <div class="article-no">04</div>
+          <div class="article-details">
+            <div class="article-details-1">
+             <img src="https://miro.medium.com/v2/resize:fill:19:19/1*mDhF9X4VO0rCrJvWFatyxg.png" alt="">
+    <div class="article-author-detail">
+      <span class="author">
+        Thi-Lam-Thuy LE 
+        <div class="about-author">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, incidunt!
+        </div>
+    </span>in <span>Towards Data Science</span></div>
+         
+            </div>
+            <div class="article-details-2">
+              I Quit Murdering People for 7 days. Here's What happened?
+            </div>
+            <div class="article-details-3">
+              <span class="article-date">Jan 16&nbsp;&sdot;&nbsp;</span>
+              <span class="article-read-time">3 min read</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="article article-5">
+
+          <div class="article-no">05</div>
+          <div class="article-details">
+            <div class="article-details-1">
+             <img src="https://miro.medium.com/v2/resize:fill:19:19/1*NMZ_0Q7PLHu9KRpDvoxNMw.png" alt="">
+    <div class="article-author-detail">
+      <span class="author">
+        Thi-Lam-Thuy LE 
+        <div class="about-author">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, incidunt!
+        </div>
+      </span>in <span>Towards Data Science</span></div>
+         
+            </div>
+            <div class="article-details-2">
+              I Quit Murdering People for 7 days. Here's What happened?
+            </div>
+            <div class="article-details-3">
+              <span class="article-date">Jan 16&nbsp;&sdot;&nbsp;</span>
+              <span class="article-read-time">3 min read</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="article article-6">
+
+          <div class="article-no">06</div>
+          <div class="article-details">
+            <div class="article-details-1">
+             <img src="data:image/png;base64,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" alt="">
+    <div class="article-author-detail">
+      <span class="author">
+        Thi-Lam-Thuy LE 
+        <div class="about-author">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias, incidunt!
+        </div>
+      </span>in <span>Towards Data Science</span></div>
+         
+            </div>
+            <div class="article-details-2">
+              I Quit Murdering People for 7 days. Here's What happened?
+            </div>
+            <div class="article-details-3">
+              <span class="article-date">Jan 16&nbsp;&sdot;&nbsp;</span>
+              <span class="article-read-time">3 min read</span>
+            </div>
+          </div>
+
+        </div>
+    </div>
+  
+  </div>
+  <!--TRENDING ARTICLES ENDS HERE-------------------------------->
+
+
+
+  <div class="separation-line"></div>
+
+  <!--STARTING MAIN ARTICLES HERE-------------------------------->
+ <div class="main-articles-container">
+
+
+  <div class="articles-container-left"> 
+    
+      <!--box1 starts here-->
+  <div class="article-conatiner-box1">
+    
+    <div class="article-container-box1-details1">
+    <img src="https://miro.medium.com/v2/resize:fill:19:19/1*tlSJZopCPn4cndd9KrDLPg.png" alt="">
+   <div class="author-name">Kathleen Murphy in Wise & Well</div>
+   <div class="about-Author">The Brain Science Behind Aging and Forgetting</div>
+   <div class="about-Author-Moretext">Are younger people smarter? Are older people wiser? Living longer affects the brain, but exactly how may surprise you</div>
+
+   <div class="article-container-box3-details">    
+    <div class="article-container-box3-details-text1">Jan 9, 2024</div>
+    <div class="article-container-box3-details-text2"> . &nbsp; 8 min reads &nbsp; .</div>
+    <button class="article-container-box3-details-button">
+      <div class="article-container-box3-details-button-text">Self Control</div>
+      </button>
+   </div>
+
+  </div> <!--details1-->
+
+
+  <div class="article-container-box1-ImgCont">
+    <img class="article-container-box1-Img" src="https://miro.medium.com/v2/resize:fill:188:126/1*TYNsHKGvELRsgalw4UwIdg.png" alt="">
+  </div>
+
+  <div class="clrfix"></div>
+  </div> 
+  <!--box1 ends here-->
+
+
+
+       <!--box2 starts here-->
+       <div class="article-conatiner-box1">
+  
+        <div class="article-container-box1-details1">
+        <img src="https://miro.medium.com/v2/resize:fill:19:19/1*yAqDFIFA5F_NXalOJKz4TA.png" alt="">
+       <div class="author-name">Tim Berners-Lee</div>
+       <div class="about-Author">Marking the Web’s 35th Birthday: An Open Letter</div>
+       <div class="about-Author-Moretext">Research suggests that people with high self-control are good at avoiding temptation — not resisting it</div>
+  
+       <div class="article-container-box3-details">    
+        <div class="article-container-box3-details-text1">Jan 9, 2024</div>
+        <div class="article-container-box3-details-text2"> . &nbsp; 8 min reads &nbsp; .</div>
+        <button class="article-container-box3-details-button">
+          <div class="article-container-box3-details-button-text">Self Control</div>
+          </button>
+       </div>
+  
+      </div> <!--details1-->
+  
+      
+      <div class="article-container-box1-ImgCont">
+        <img class="article-container-box1-Img" src="https://miro.medium.com/v2/resize:fill:188:126/1*JeaJWN5uIwe4UqSESIP4Nw.jpeg" alt="">
+      </div>
+  
+      <div class="clrfix"></div>
+      </div> 
+      <!--box2 ends here-->
+
+           <!--box3 starts here-->
+   <div class="article-conatiner-box1">
+  
+    <div class="article-container-box1-details1">
+    <img src="https://miro.medium.com/v2/resize:fill:19:19/1*yAqDFIFA5F_NXalOJKz4TA.png" alt="">
+   <div class="author-name">Sierra Elman</div>
+   <div class="about-Author"> The Future of Poetry</div>
+   <div class="about-Author-Moretext">Is AI Smarter Than an 8th Grader? </div>
+   <div class="article-container-box3-details">    
+    <div class="article-container-box3-details-text1">Jan 9, 2024</div>
+    <div class="article-container-box3-details-text2"> . &nbsp; 8 min reads &nbsp; .</div>
+    <button class="article-container-box3-details-button">
+      <div class="article-container-box3-details-button-text">Self Control</div>
+      </button>
+   </div>
+
+  </div> <!--details1-->
+
+  
+  <div class="article-container-box1-ImgCont">
+    <img class="article-container-box1-Img" src="https://miro.medium.com/v2/resize:fill:188:126/1*e4g74GVu_qFOMeeAO6WcIQ.jpeg" alt="">
+  </div>
+
+  <div class="clrfix"></div>
+  </div> 
+  <!--box3 ends here-->
+
+       <!--box4 starts here-->
+       <div class="article-conatiner-box1">
+  
+        <div class="article-container-box1-details1">
+        <img src="https://miro.medium.com/v2/resize:fill:19:19/1*sHhtYhaCe2Uc3IU0IgKwIQ.png" alt="">
+       <div class="author-name">Medium Staff in The Medium Blog</div>
+       <div class="about-Author">It happened on Medium: February roundup</div>
+       <div class="about-Author-Moretext">Last month’s most-read stories, most-highlighted sentences, and stories by writers new to Medium</div>
+  
+       <div class="article-container-box3-details">    
+        <div class="article-container-box3-details-text1">Jan 9, 2024</div>
+        <div class="article-container-box3-details-text2"> . &nbsp; 8 min reads &nbsp; .</div>
+        <button class="article-container-box3-details-button">
+          <div class="article-container-box3-details-button-text">Self Control</div>
+          </button>
+       </div>
+  
+      </div> <!--details1-->
+  
+      
+      <div class="article-container-box1-ImgCont">
+        <img class="article-container-box1-Img" src="https://miro.medium.com/v2/resize:fill:188:126/1*MnDr70SEowwqW2r_08-E_w.png" alt="">
+      </div>
+  
+      <div class="clrfix"></div>
+      </div> 
+      <!--box4 ends here-->
+
+           <!--box5 starts here-->
+   <div class="article-conatiner-box1">
+  
+    <div class="article-container-box1-details1">
+    <img src="https://miro.medium.com/v2/resize:fill:19:19/1*yAqDFIFA5F_NXalOJKz4TA.png" alt="">
+   <div class="author-name">Avi Loeb</div>
+   <div class="about-Author">Would Albert Einstein End Up in Academia</div>
+   <div class="about-Author-Moretext">Imagine that you are a young Albert Einstein in Gen Z, born 120 years after the legendary scientist</div>
+
+   <div class="article-container-box3-details">    
+    <div class="article-container-box3-details-text1">Jan 9, 2024</div>
+    <div class="article-container-box3-details-text2"> . &nbsp; 8 min reads &nbsp; .</div>
+    <button class="article-container-box3-details-button">
+      <div class="article-container-box3-details-button-text">Self Control</div>
+      </button>
+   </div>
+
+  </div> <!--details1-->
+
+  
+  <div class="article-container-box1-ImgCont">
+    <img class="article-container-box1-Img" src="https://miro.medium.com/v2/resize:fill:188:126/1*Bes2imNM-HKOz0K-L3-7sg.jpeg" alt="">
+  </div>
+
+  <div class="clrfix"></div>
+  </div> 
+  <!--box5 ends here-->
+
+       <!--box6 starts here-->
+       <div class="article-conatiner-box1">
+  
+        <div class="article-container-box1-details1">
+        <img src="https://miro.medium.com/v2/resize:fill:19:19/1*yAqDFIFA5F_NXalOJKz4TA.png" alt="">
+       <div class="author-name">Maria Garcia in A-Culturated</div>
+       <div class="about-Author">The Infinite Shades of Saudade Blue</div>
+       <div class="about-Author-Moretext">Saudade isn’t just a word, it’s a color, and a feeling Shades of Saudade Blue</div>
+  
+       <div class="article-container-box3-details">    
+        <div class="article-container-box3-details-text1">Jan 9, 2024</div>
+        <div class="article-container-box3-details-text2"> . &nbsp; 8 min reads &nbsp; .</div>
+        <button class="article-container-box3-details-button">
+          <div class="article-container-box3-details-button-text">Self Control</div>
+          </button>
+       </div>
+  
+      </div> <!--details1-->
+  
+      
+      <div class="article-container-box1-ImgCont">
+        <img class="article-container-box1-Img" src="https://miro.medium.com/v2/resize:fill:188:126/1*-FBZJNyicWLAvPc_vBm8og.jpeg" alt="">
+      </div>
+  
+      <div class="clrfix"></div>
+      </div> 
+      <!--box6 ends here-->
+
+           <!--box7 starts here-->
+   <div class="article-conatiner-box1">
+  
+    <div class="article-container-box1-details1">
+    <img src="https://miro.medium.com/v2/resize:fill:19:19/1*yAqDFIFA5F_NXalOJKz4TA.png" alt="">
+   <div class="author-name">Michael Schneider</div>
+   <div class="about-Author">How to change a city through a ballot measure</div>
+   <div class="about-Author-Moretext">In late 2021, I was frustrated. I had started Streets For All two years earlier to make Los Angeles a more multimodal city.</div>
+
+   <div class="article-container-box3-details">    
+    <div class="article-container-box3-details-text1">Jan 9, 2024</div>
+    <div class="article-container-box3-details-text2"> . &nbsp; 8 min reads &nbsp; .</div>
+    <button class="article-container-box3-details-button">
+      <div class="article-container-box3-details-button-text">Self Control</div>
+      </button>
+   </div>
+
+  </div> <!--details1-->
+
+  
+  <div class="article-container-box1-ImgCont">
+    <img class="article-container-box1-Img" src="https://miro.medium.com/v2/resize:fill:188:126/1*VV1UqRzRA-ziU7r87-R6DQ.png" alt="">
+  </div>
+
+  <div class="clrfix"></div>
+  </div> 
+  <!--box7 ends here-->
+
+       <!--box8 starts here-->
+       <div class="article-conatiner-box1">
+  
+        <div class="article-container-box1-details1">
+        <img src="https://miro.medium.com/v2/resize:fill:19:19/1*yAqDFIFA5F_NXalOJKz4TA.png" alt="">
+       <div class="author-name">Thomas Smith in The Generator</div>
+       <div class="about-Author">Trust in photos is eroding fast, and tech  to blame</div>
+       <div class="about-Author-Moretext">Kate Middleton’s Doctored Photo is a Sign of Something Much More Serious</div>
+  
+       <div class="article-container-box3-details">    
+        <div class="article-container-box3-details-text1">Jan 9, 2024</div>
+        <div class="article-container-box3-details-text2"> . &nbsp; 8 min reads &nbsp; .</div>
+        <button class="article-container-box3-details-button">
+          <div class="article-container-box3-details-button-text">Self Control</div>
+          </button>
+       </div>
+  
+      </div> <!--details1-->
+  
+      
+      <div class="article-container-box1-ImgCont">
+        <img class="article-container-box1-Img" src="https://miro.medium.com/v2/resize:fill:188:126/1*qxwGRoHBIloz8yzftgvpug.jpeg" alt="">
+      </div>
+  
+      <div class="clrfix"></div>
+      </div> 
+      <!--box8 ends here-->
+
+           <!--box9 starts here-->
+   <div class="article-conatiner-box1">
+  
+    <div class="article-container-box1-details1">
+    <img src="https://miro.medium.com/v2/resize:fill:19:19/1*yAqDFIFA5F_NXalOJKz4TA.png" alt="">
+   <div class="author-name">Faithe J Day</div>
+   <div class="about-Author">What TF Did I Watch?Black Digital Storytelling</div>
+   <div class="about-Author-Moretext">Digital Griots, Listening Publics, and the Ways Twitter and TikTok Influence Communication Practice</div>
+
+   <div class="article-container-box3-details">    
+    <div class="article-container-box3-details-text1">Jan 9, 2024</div>
+    <div class="article-container-box3-details-text2"> . &nbsp; 8 min reads &nbsp; .</div>
+    <button class="article-container-box3-details-button">
+      <div class="article-container-box3-details-button-text">Self Control</div>
+      </button>
+   </div>
+
+  </div> <!--details1-->
+
+  
+  <div class="article-container-box1-ImgCont">
+    <img class="article-container-box1-Img" src="https://miro.medium.com/v2/da:true/resize:fill:188:126/0*VrT_n1xOh3PnLwGN" alt="">
+  </div>
+
+  <div class="clrfix"></div>
+  </div> 
+  <!--box9 ends here-->
+
+       <!--box10 starts here-->
+       <div class="article-conatiner-box1">
+  
+        <div class="article-container-box1-details1">
+        <img src="https://miro.medium.com/v2/resize:fill:19:19/1*yAqDFIFA5F_NXalOJKz4TA.png" alt="">
+       <div class="author-name">Dustin Moskovitz</div>
+       <div class="about-Author">The Long Journey to Doing Good Better</div>
+       <div class="about-Author-Moretext">The more I learn, the more I realize how much I don’t know. — Albert Einstein</div>
+  
+       <div class="article-container-box3-details">    
+        <div class="article-container-box3-details-text1">Jan 9, 2024</div>
+        <div class="article-container-box3-details-text2"> . &nbsp; 8 min reads &nbsp; .</div>
+        <button class="article-container-box3-details-button">
+          <div class="article-container-box3-details-button-text">Self Control</div>
+          </button>
+       </div>
+  
+      </div> <!--details1-->
+  
+      
+      <div class="article-container-box1-ImgCont">
+        <img class="article-container-box1-Img" src="https://miro.medium.com/v2/resize:fill:188:126/1*22QnF5qnl4TLN9b6TpYkHA.png" alt="">
+      </div>
+  
+      <div class="clrfix"></div>
+      </div> 
+      <!--box10 ends here-->
+
+           <!--box11 starts here-->
+   <div class="article-conatiner-box1">
+  
+    <div class="article-container-box1-details1">
+    <img src="https://miro.medium.com/v2/resize:fill:19:19/1*J36i6wbjXjINfSp6negAYw.png" alt="">
+   <div class="author-name">Aspiring Reader in Hooked on Books</div>
+   <div class="about-Author">The Origins Of Dune</div>
+   <div class="about-Author-Moretext">Before you watch part 2 of Dune, learn about the inspirations and origins of Frank Herbert’s classic SciFi novel</div>
+
+   <div class="article-container-box3-details">    
+    <div class="article-container-box3-details-text1">Jan 9, 2024</div>
+    <div class="article-container-box3-details-text2"> . &nbsp; 8 min reads &nbsp; .</div>
+    <button class="article-container-box3-details-button">
+      <div class="article-container-box3-details-button-text">Self Control</div>
+      </button>
+   </div>
+
+  </div> <!--details1-->
+
+  
+  <div class="article-container-box1-ImgCont">
+    <img class="article-container-box1-Img" src="https://miro.medium.com/v2/resize:fill:188:126/0*FEP16gXObxcHgiVz.jpg" alt="">
+  </div>
+
+  <div class="clrfix"></div>
+  </div> 
+  <!--box11 ends here-->
+
+       <!--box12 starts here-->
+       <div class="article-conatiner-box1">
+  
+        <div class="article-container-box1-details1">
+        <img src="https://miro.medium.com/v2/resize:fill:19:19/1*yAqDFIFA5F_NXalOJKz4TA.png" alt="">
+       <div class="author-name">Margaret Dean</div>
+       <div class="about-Author">The View From Here</div>
+       <div class="about-Author-Moretext">A fringe-dweller’s story about making a contribution to society,The View From Here</div>
+  
+       <div class="article-container-box3-details">    
+        <div class="article-container-box3-details-text1">Jan 9, 2024</div>
+        <div class="article-container-box3-details-text2"> . &nbsp; 8 min reads &nbsp; .</div>
+        <button class="article-container-box3-details-button">
+          <div class="article-container-box3-details-button-text">Self Control</div>
+          </button>
+       </div>
+  
+      </div> <!--details1-->
+  
+      
+      <div class="article-container-box1-ImgCont">
+        <img class="article-container-box1-Img" src="https://miro.medium.com/v2/resize:fill:188:126/1*NCfu35gbrKOcI0CkixOpdQ.jpeg" alt="">
+      </div>
+  
+      <div class="clrfix"></div>
+      </div> 
+      <!--box12 ends here-->
+
+  
+       <!--box13 starts here-->
+       <div class="article-conatiner-box1">
+  
+        <div class="article-container-box1-details1">
+        <img src="https://miro.medium.com/v2/resize:fill:19:19/1*yAqDFIFA5F_NXalOJKz4TA.png" alt="">
+       <div class="author-name">Marc Randolph</div>
+       <div class="about-Author">Everything I Know About Creating Buzz</div>
+       <div class="about-Author-Moretext">Scarcity is the one thing you can never have enough of.I learned from Taylor Swift</div>
+  
+       <div class="article-container-box3-details">    
+        <div class="article-container-box3-details-text1">Jan 9, 2024</div>
+        <div class="article-container-box3-details-text2"> . &nbsp; 8 min reads &nbsp; .</div>
+        <button class="article-container-box3-details-button">
+          <div class="article-container-box3-details-button-text">Self Control</div>
+          </button>
+       </div>
+  
+      </div> <!--details1-->
+  
+      
+      <div class="article-container-box1-ImgCont">
+        <img class="article-container-box1-Img" src="https://miro.medium.com/v2/resize:fill:188:126/1*7DHJGedQehj35XyPVPy8NQ.jpeg" alt="">
+      </div>
+  
+      <div class="clrfix"></div>
+      </div> 
+      <!--box13 ends here-->
+
+  
+      
+       <!--box14 starts here-->
+       <div class="article-conatiner-box1">
+  
+        <div class="article-container-box1-details1">
+        <img src="https://miro.medium.com/v2/resize:fill:19:19/1*yAqDFIFA5F_NXalOJKz4TA.png" alt="">
+       <div class="author-name">Riikka Iivanainen</div>
+       <div class="about-Author">The secret life of people with high self-control</div>
+       <div class="about-Author-Moretext">Research suggests that people with high self-control are good at avoiding temptation — not resisting it</div>
+  
+       <div class="article-container-box3-details">    
+        <div class="article-container-box3-details-text1">Jan 9, 2024</div>
+        <div class="article-container-box3-details-text2"> . &nbsp; 8 min reads &nbsp; .</div>
+        <button class="article-container-box3-details-button">
+          <div class="article-container-box3-details-button-text">Self Control</div>
+          </button>
+       </div>
+  
+      </div> <!--details1-->
+  
+      
+      <div class="article-container-box1-ImgCont">
+        <img class="article-container-box1-Img" src="https://miro.medium.com/v2/resize:fill:188:126/1*H3DBMcaJgdDk4D16lggx5g.jpeg" alt="">
+      </div>
+  
+      <div class="clrfix"></div>
+      </div> 
+      <!--box14 ends here-->
+
+
+  </div>
+ 
+    
+
+<div class="articles-topics-container-right"> 
+  
+  <div class="articles-topics-heading">Discover more of what matters to you</div>
+  <button class="topic topic-1">Programming</button>
+  <button class="topic topic-2"> Data Science</button>
+  <button class="topic topic-3"> Technology</button>
+  <button class="topic topic-4">Self Improvement</button>
+  <button class="topic topic-5">Writing</button>
+  <button class="topic topic-6">Relationships</button>
+  <button class="topic topic-7">Machine Learning</button>
+  <button class="topic topic-8">Productivity</button>
+  <button class="topic topic-9">Politics</button>
+
+  <div class="see-more-topics-linktext">See more topics</div>
+  <div class="separationline"></div>
+
+  <table class="websitedetails">
+    <tr class="websitedetails-row row1">
+     <td class="websitedetails-row1-data">Help</td>
+     <td class="websitedetails-row1-data">Status</td>
+     <td class="websitedetails-row1-data">About</td>
+     <td class="websitedetails-row1-data">Careers</td>
+     <td class="websitedetails-row1-data">Blog</td>
+     <td class="websitedetails-row1-data">Privacy</td>
+    </tr>
+
+    <tr class="websitedetails-row row2">
+      <td class="websitedetails-row2-data1">Terms</td>
+      <td class="websitedetails-row2-data2">Teams</td>
+     </tr>
+  </table>
+
+</div>
+
+</div> 
+
+
+
+ 
+  <!--ENDING MAIN ARTICLES HERE-------------------------------->
+
+
+
+   
+</body>
+</html>

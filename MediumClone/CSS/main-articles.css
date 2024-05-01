@@ -1,0 +1,277 @@
+
+.main-articles-container
+{
+/*  border: 2px solid black; */
+  width: 85%;
+  height: 2700px;
+  margin: auto;
+  margin-top: 100px;
+  clear: both;
+}
+
+.articles-container-left
+{
+  width: 55%;
+  height: 2690px;
+  display: inline-block;
+  float: left;
+  vertical-align: top;
+}
+
+.article-conatiner-box1
+{
+/*  border: 1px solid black; */
+  height: 190px;
+  width: 100%;
+}
+.article-container-box1-details1
+{
+/*  border: 1px solid black; */
+  height: 190px;
+  width: 69%;
+  float: left;
+}
+.author-name
+{
+/*  border: 1px solid black; */
+  width: 55%;
+  height: 17px;
+  margin-left: 28px;
+  margin-top: -22px;
+  font-family: sans-serif;
+}
+.about-Author
+{
+/*  border: 6px solid black; */
+  height: 61px;
+  font-family: sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  margin-top: 10px;
+  width: 100%;
+}
+.about-Author-Moretext
+{
+/*  border: 1px solid black; */
+  height: 50px;
+  width: 100%;
+  font-size: 18px;
+  font-family: sans-serif;
+  color: #6B6B6B;
+  margin-top: -20px;
+}
+.article-container-box3-details
+{
+/* border: 1px solid black; */
+ width: 90%;
+ height: 25px;
+ margin-top: 18px;
+ position: relative;
+}
+
+.article-container-box3-details-text1,
+.article-container-box3-details-text2,
+.article-container-box3-details-button
+{
+ position: absolute;
+ color: #6B6B6B;
+ font-family: sans-serif;
+}
+
+.article-container-box3-details-text1
+{
+/* border: 1px solid black; */
+ margin-top: 2px;
+}
+.article-container-box3-details-text2
+{
+/*  border: 1px solid black; */
+  margin-left: 80px;
+  margin-top: 2px;
+}
+.article-container-box3-details-button
+{
+/*  border: 1px solid black; */
+  width: 18%;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 13px;
+  border: 0;
+  margin-bottom: 3px;
+  margin-left: 200px;
+  text-align: center;
+  height: 25px;
+}
+.article-container-box3-details-button-text
+{
+/*  border: 1px solid black; */
+  width: 160%;
+  height: 18px;
+  margin-top: -5px;
+  margin-left: -20px;
+}
+
+
+
+
+
+
+.article-container-box1-ImgCont
+{
+/*  border: 1px solid black; */
+  height: 180px;
+  width: 30%;
+  float: right;
+}
+.clrfix
+{
+  clear: both;
+}
+.article-container-box1-Img
+{
+/*  border: 1px solid black; */
+  height: 160px;
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RIGHT SIDE TOPIC CONTAINER STARTS HERE*/
+
+.articles-topics-container-right
+{
+/*  border: 2px solid black; */
+  width: 35%;
+  display: inline-block;
+  float: right;
+  position: sticky;
+}
+
+.articles-topics-heading
+{
+/*  border: 1px solid black; */
+  height: 40px;
+  width: 90%;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 19px;
+  margin-left: 9px;
+}
+.topic
+{
+    width: 150px;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: 18px;
+    border: 0;
+    margin-top: 13px;
+    margin-right: 9px;
+}
+.topic-1
+{
+  margin-left: 9px;
+}
+.topic-3
+{
+  width: 135px;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 18px;
+  border: 0;
+  margin-top: 6px;
+}
+.topic-4
+{
+  width: 178px;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 18px;
+  border: 0;
+  margin-top: 6px;
+  margin-left: 9px;
+}
+.topic-5
+{
+  width: 100px;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 18px;
+  border: 0;
+  margin-top: 6px;
+}
+.topic-7
+{
+  width: 178px;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 18px;
+  border: 0;
+  margin-top: 6px;
+  margin-left: 9px;
+
+}
+.topic-9
+{
+  width: 100px;
+  padding: 10px;
+  border-radius: 30px;
+  font-size: 18px;
+  border: 0;
+  margin-top: 6px;
+}
+
+.see-more-topics-linktext
+{
+/*   border: 1px solid black; */
+   font-family: sans-serif;
+   margin-left: 0px;
+   width: 25%;
+   margin-top: 25px;
+   color: green;
+}
+.separationline
+{
+  border: 1px solid rgba(220, 220, 220, 0.334);
+  height: 0px;
+  width: 100%;
+  margin-top: 47px;
+
+}
+.websitedetails
+{
+/*  border: 1px solid black; */
+  height: 90px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.websitedetails-row1-data
+{
+/*  border: 1px solid black; */
+  height: 5px;
+  width: 7%;
+  font-family: sans-serif;
+  color: gray;
+}
+.websitedetails-row2-data1,
+.websitedetails-row2-data2
+{
+/*  border: 1px solid black; */
+  height: 7px;
+  width: 11%;
+  font-family: sans-serif;
+  color: gray;
+}
+/* RIGHT SIDE TOPIC CONTAINER ENDS HERE*/
